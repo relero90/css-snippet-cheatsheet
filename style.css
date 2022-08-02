@@ -1,0 +1,85 @@
+/* color scheme variables */
+:root {
+  --background: #100f0f;
+  --primary-text: #76549a;
+  --secondary-text: #df7861;
+  --outline: #fcf8e8;
+}
+/* sets html font family */
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+header {
+  text-align: center;
+}
+
+header h1 {
+  color: var(--primary-text);
+}
+
+header p {
+  color: var(--secondary-text);
+}
+/* Creates a flex container to hold each code snippet & associated information in the form of a div (flex child). Wraps flex children and spaces evenly for responsive styling. */
+
+body {
+  background: linear-gradient(0deg, var(--primary-text), var(--background) 80%);
+}
+
+section {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 1vw;
+}
+
+/* currently applies dotted outline to code-div as well */
+section div {
+  width: 26%;
+  min-width: 270px;
+  background-color: var(--background);
+  border: 2px dashed var(--outline);
+  padding: 1vw;
+  margin-top: 4vw;
+}
+/* styles card headings and positions them offset on the top of the cards, transition animation */
+h2 {
+  color: var(--background);
+  background-color: var(--primary-text);
+  padding: 0.6vw;
+  border: solid 1px var(--outline);
+  border-radius: 5px;
+  position: relative;
+  bottom: 50px;
+  transition: all 0.5s ease-in-out;
+}
+/* when user hovers over div, performs transition animation established above */
+section div:hover,
+section div:hover h2 {
+  box-shadow: inset 0px 0px 8px var(--outline), 0 0 15px var(--secondary-text);
+}
+
+section div p {
+  color: var(--secondary-text);
+}
+/* user-select: all allows user to click to highlight all text */
+section div pre {
+  background-color: var(--outline);
+  user-select: all;
+  width: 100%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+footer {
+  text-align: center;
+  color: var(--outline);
+}
+
+/* at screen width 768 and lower, expands each div to 80% so that they fill the screen and display in a single column */
+@media screen and (max-width: 768px) {
+  main section div {
+    width: 80%;
+  }
+}
