@@ -8,7 +8,7 @@ This is a CSS styling resource that includes snippets of copyable code for commo
 
 ## Screen Shot
 
-!["The webpage includes a header and cards including copyable CSS code snippets."](./assets/screenshot.pdf)
+![The webpage includes a header and cards including copyable CSS code snippets.](./assets/screenshot.png)
 
 ## Deployed Link
 
